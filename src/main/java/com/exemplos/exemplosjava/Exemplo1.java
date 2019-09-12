@@ -58,6 +58,20 @@ public class Exemplo1 {
          * variável de fora da função, pois nada foi alterado diretamente na
          * referência da memória
          */
+//        
+//        
+//        
+        /**
+         * Os '...' (Três pontos) é usado quando esperamos de 1 a N parametros
+         * do mesmo tipo, sendo tratado como um array dentro da funcao.
+         *
+         * Ao chamar a função, pódemos passar somente 1 parametro, N parametros
+         * ou até um array contendo os parametros
+         */
+        funcao4("Laila");
+        funcao4("Laila", "Kaique", "Fabio", "Bruna");
+        funcao4(new String[]{"Laila", "Kaique", "Fabio", "Bruna"});
+
     }
 
     public static void funcao1(HashMap<String, Object> mapa) {
@@ -86,6 +100,16 @@ public class Exemplo1 {
 
         // Redefine a variável mapa3 para uma nova instancia de um HashMap
         mapa3 = new HashMap<>();
+        mapa3.put("passou_pela_funcao3", "Sim");
+    }
+
+    public static void funcao4(String... nomes) {
+
+        System.out.println("Lista de nomes: ");
+        // Mostra no console todos os parametros que recebeu
+        for (String nome : nomes) {
+            System.out.println(" • Nome: " + nome);
+        }
     }
 
 }
