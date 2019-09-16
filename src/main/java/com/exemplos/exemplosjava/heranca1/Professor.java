@@ -22,6 +22,10 @@ public class Professor extends Pessoa {
         return String.format("Professor: %s\nDisciplia: %s\nSalário: R$ %.2f", getNomeCompleto(), disciplina, salario);
     }
 
+    public boolean isProfessor() {
+        return true;
+    }
+
     /**
      * Não é possivel dar Override em um método final.
      *

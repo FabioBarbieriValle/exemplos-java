@@ -1,86 +1,77 @@
 package com.exemplos.exemplosjava;
 
-import com.exemplos.exemplosjava.heranca1.*;
+import com.exemplos.exemplosjava.heranca1.Pessoa;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Vector;
 
 public class Exemplo2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        Pessoa pessoa = new Pessoa("Maria", "Silva", new Date(1993, 9, 12));
-        mostraInformacoes(pessoa);
+        int[] arrayInt = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        String[] arrayString = new String[]{};
+        int[] arrayNulo = null;
 
-        Professor prof = new Professor("José", "Santos", new Date(2005, 05, 05), "Cálculo", 2500.50f);
-        mostraInformacoes(prof);
+//        System.out.println("Itens do array 'arrayInt': " + Arrays.toString(arrayInt));
+//        System.out.println("Itens do array 'arrayString': " + Arrays.toString(arrayString));
+//        System.out.println("Itens do array 'arrayString': " + Arrays.toString(arrayNulo));
+//        System.out.println("\n");
+//
+//        for (int i = 0; i < arrayInt.length / 2; i++) {
+//
+//            int valor = arrayInt[i];
+//            System.out.println("Array - " + i + " " + valor);
+//
+//        }
+//        System.out.println("\n");
+//
+//        int j = 0;
+//        while (j < 5) {
+//            System.out.println("Array2 - " + j + " " + arrayInt[j]);
+//            j++;
+//        }
+//        for (int valor : arrayInt) {
+//            System.out.println("Array - " + valor);
+//        }
+        int tamanho = 5;
 
-        Aluno aluno = new Aluno("Carlos", "Nascimento", new Date(1980, 07, 18), 123456, 7.5f);
-        mostraInformacoes(aluno);
+        String[] nome = new String[tamanho];
+        String[] sobrenome = new String[tamanho];
+        int[] idade = new int[tamanho];
 
-        /**
-         * Mesmo ao dar cast de Professor para Pessoa, quando chamamos a função
-         * 'getInformacoes()', será executada a que foi definida em Professor
-         */
-        Pessoa convertido = (Pessoa) prof;
-        mostraInformacoes(convertido);
+//        int controle = 0;
+//        while (controle < 5) {
+//
+//            //scan nome
+//            nome[controle] = "Robso" + controle;
+//
+//            //scan sobrenome
+//            sobrenome[controle] = "silva" + +controle;
+//
+//            //scan idade
+//            idade[controle] = controle;
+//
+//            controle++;
+//        }
+//
+        Alguem[] pessoas = new Alguem[tamanho];
 
-        System.out.println("\nUso do 'instanceof'");
+        int controle = 0;
+        while (controle < 5) {
+            // scan nome
+            // scan sobrenome
+            // scan idade         
 
-        System.out.println("\nProfessor::");
-        if ((convertido instanceof Pessoa)) {
-            System.out.println("É instância de Pessoa");
+            pessoas[controle] = new Alguem("Robson", "Silva", 10);
+
+            controle++;
         }
-        if ((convertido instanceof Aluno)) {
-            System.out.println("É instância de Aluno");
-        }
-        if ((convertido instanceof Professor)) {
-            System.out.println("É instância de Professor");
-        }
 
-        /**
-         * Como 'aluno' herda 'Pessoa', não é preciso dar cast
-         */
-        convertido = aluno;
-
-        /**
-         * Agora o inverso não é verdade, de 'Pessoa' para 'Aluno' é preciso dar
-         * cast
-         */
-        aluno = (Aluno) convertido;
-
-        System.out.println("\nAluno::");
-        if ((convertido instanceof Pessoa)) {
-            System.out.println("É instância de Pessoa");
-        }
-        if ((convertido instanceof Aluno)) {
-            System.out.println("É instância de Aluno");
-        }
-        if ((convertido instanceof Professor)) {
-            System.out.println("É instância de Professor");
-        }
-
-        convertido = pessoa;
-
-        System.out.println("\nPessoa::");
-        if ((convertido instanceof Pessoa)) {
-            System.out.println("É instância de Pessoa");
-        }
-        if ((convertido instanceof Aluno)) {
-            System.out.println("É instância de Aluno");
-        }
-        if ((convertido instanceof Professor)) {
-            System.out.println("É instância de Professor");
+        for (int i = 0; i < nome.length; i++) {
+            System.out.println("Array - " + pessoas[i].getInformacoes());
         }
 
     }
 
-    /**
-     * Recebe a classe Pessoa ou qualquer classe que herde Pessoa e mostra suas
-     * informações
-     */
-    public static void mostraInformacoes(Pessoa p) {
-
-        System.out.println("\n\nInformações de:");
-        System.out.println(p.getInformacoes());
-
-    }
 }

@@ -19,9 +19,11 @@ public class Aluno extends Pessoa {
      * 'super' se refere a classe pai (classe que esta está herdando)
      */
     public Aluno(String nome, String sobrenome, Date dataNascimento, int matricula, float media) {
-        super(nome, sobrenome, dataNascimento);
+        super(nome, sobrenome, dataNascimento); //Pessoa(nome, sobrenome, dataNascimento)
         this.matricula = matricula;
         this.media = media;
+
+//        getNomeCompleto();
     }
 
     /**
@@ -29,10 +31,16 @@ public class Aluno extends Pessoa {
      * é opcional
      */
     @Override
+    /**
+     * A função 'getInformações' foi reescrita em Aluno, utilizando o resultado
+     * da função em Pessoa e adicionando informações novas.
+     *
+     * Lembrando que no caso do override, utilizar super.getInformacoes() é
+     * opcional
+     *
+     */
     public String getInformacoes() {
         return String.format(super.getInformacoes() + "\nMatrícula: %s\nMédia: %.2f", matricula, media);
     }
-    
-    
 
 }
