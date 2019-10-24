@@ -1,4 +1,4 @@
-package string;
+package aulas.manha;
 
 import java.util.Arrays;
 
