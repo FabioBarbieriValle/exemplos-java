@@ -14,19 +14,14 @@ public class A2 {
 
         for (char c = 'Z'; c >= 'A'; c--) {
             valores.add(new Ordenar(c + ""));
-            Thread.sleep(1);
         }
         valores.add(new Ordenar("A"));
 
         Collections.sort(valores, new Comparator<Ordenar>() {
             @Override
             public int compare(Ordenar o1, Ordenar o2) {
-                int i = o1.getNome().compareToIgnoreCase(o2.getNome());
-                if (i == 0) {
-                    return 1;
-                } else {
-                    return i;
-                }
+                //CompareTo retorna um INT, sendo que -1 <= X <= 1 
+                return o1.getNome().compareToIgnoreCase(o2.getNome());
             }
         });
 

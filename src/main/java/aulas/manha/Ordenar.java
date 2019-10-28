@@ -1,5 +1,7 @@
 package aulas.manha;
 
+import java.util.Objects;
+
 public class Ordenar implements Comparable<Ordenar> {
 
     private String nome;
@@ -30,9 +32,16 @@ public class Ordenar implements Comparable<Ordenar> {
     @Override
     public boolean equals(Object obj) {
         if ((obj instanceof Ordenar)) {
-            return ((Ordenar) obj).nome == (nome);
+            return (((Ordenar) obj).nome == null ? (nome) == null : ((Ordenar) obj).nome.equals(nome));
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.nome);
+        return hash;
     }
 
     public long getMillis() {

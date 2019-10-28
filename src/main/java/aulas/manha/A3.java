@@ -3,22 +3,20 @@ package aulas.manha;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 public class A3 {
 
     public static void main(String[] args) {
 
-        //String format
-//        Professor carlos = new Professor("Carlos", 35, 1500.123456789F);
-//        String texto = "- Nome: %s\n- Idade: %d ano(s)\n- Salário: R$%.2f";
-//
-//        System.out.println("Professor:");
-//        System.out.println(String.format(texto, carlos.nome, carlos.idade, carlos.salario));
-//        System.out.println("Salário: " + carlos.salario);
+//        String format - Lista com os especificadores: https://dzone.com/articles/java-string-format-examples
+        Professor carlos = new Professor("Carlos", 35, 1500.123456789F);
+        String texto = "- Nome: %s\n- Idade: %d ano(s)\n- Salário: R$%.2f";
+
+        System.out.println("Professor:");
+        System.out.println(String.format(texto, carlos.nome, carlos.idade, carlos.salario));
+        System.out.println("Salário: " + carlos.salario);
         System.out.println("");
 
         List<String> nomes = new ArrayList<>(Arrays.asList("Joel", "Gimenes", "Kaique", "Felipe", "Murilo", "Fernanda", "Alessandra"));
@@ -44,11 +42,11 @@ public class A3 {
         System.out.println("");
 
         boolean removeu = nomes.remove("Joel");
-        System.out.println("removido joel");
+        System.out.println("removido joel " + removeu);
         System.out.println("Nomes: " + nomes.stream().collect(Collectors.joining(",")));
 
-        System.out.println("removido index 1");
         String removido = nomes.remove(1);
+        System.out.println("removido index 1 - " + removido);
         System.out.println("Nomes: " + nomes.stream().collect(Collectors.joining(",")));
 
         System.out.println("Adiciondo 3 'fernanda'");
@@ -57,7 +55,7 @@ public class A3 {
         nomes.add("fernanda");
         Collections.sort(nomes);
 
-        //troca todos os "fernanda" por "removido"
+        //troca todos os "Fernanda" por "REMOVIDO"
         nomes.replaceAll((t) -> t.equals("Fernanda") ? "REMOVIDO" : t);
 
         System.out.println("Replace todos 'fernanda'");

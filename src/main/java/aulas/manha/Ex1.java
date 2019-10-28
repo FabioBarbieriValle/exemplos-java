@@ -9,11 +9,10 @@ import java.util.function.Predicate;
 
 public class Ex1 {
 
-    public static void Exercicio1(String[] args) {
+    public static void main(String[] args) {
 
         // Lista de nomes que deverá ser usada
-        List<String> nomes = new ArrayList<>(Arrays.asList("Joel", "Gimenes", "Kaique", "Felipe", "Murilo", "Fernanda", "Alessandra", "Laila", "Bruna", "Robso", "Igor"));
-
+        final List<String> nomes = new ArrayList<>(Arrays.asList("Joel", "Gimenes", "Kaique", "Felipe", "Murilo", "Fernanda", "Alessandra", "Laila", "Bruna", "Robso", "Igor"));
         /**
          * 1. Criar um consumer que recebe uma List<String> e mostra no console
          * todos os itens em uma única linha, separados por ' ,' (espaço e
