@@ -1,5 +1,7 @@
 package aulas.manha;
 
+import java.util.List;
+
 public class Ex2 {
 
     public static void main(String[] args) {
@@ -21,27 +23,36 @@ public class Ex2 {
         /**
          * 2. Crie uma função que remova números duplicados de um Array ou List
          */
-        
         /**
          * 3. Crie uma função que inverta as palavras em uma frase.
-         * 
-         * Ex: Entrada - "O Kaique está na sala"
-         *       Saida - "sala na está Kaique O"
-         * 
+         *
+         * Ex: Entrada - "O Kaique está na sala" Saida - "sala na está Kaique O"
          */
-        
         /**
          * 4. Crie uma função que inverta os algarismos em um número
-         *      
-         * Ex: Entrada - 123456
-         *       Saida - 654321
+         *
+         * Ex: Entrada - 123456 Saida - 654321
          */
-        
-        
     }
 
     private static boolean palimdromo(String texto) {
         throw new UnsupportedOperationException("Exercicio 1");
+    }
+
+    private static int[] removeDuplicados(int[] array) {
+        throw new UnsupportedOperationException("Exercicio 2");
+    }
+
+    private static void removeDuplicados(List<Integer> lista) {
+        throw new UnsupportedOperationException("Exercicio 2");
+    }
+
+    private static String invertePalavras(String frase) {
+        throw new UnsupportedOperationException("Exercicio 3");
+    }
+
+    private static int inverteNumero(int entrada) {
+        throw new UnsupportedOperationException("Exercicio 4 ");
     }
 
 }

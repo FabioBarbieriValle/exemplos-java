@@ -6,7 +6,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class ResumoA5A6 {
+public class ResumoA4A5 {
 
     public static void main(String[] args) throws InterruptedException {
 
