@@ -1,9 +1,9 @@
 package com.exemplos.exemplosjava.interface1;
 
 public class Exemplo {
-    
+
     public static void main(String[] args) {
-        
+
         A a = new A();
         B b = new B();
         J j = new J();
@@ -28,11 +28,11 @@ public class Exemplo {
 //        System.out.print("interface C em B : ");
 //        c.funcaoC();
     }
-    
+
     public static void menu(C classeC) {
         System.out.println("Recebi a classe C cuja 'funcaoC' retorna: " + classeC.funcaoRetorno(10));
         classeC.funcaoC();
-        
+
     }
-    
+
 }

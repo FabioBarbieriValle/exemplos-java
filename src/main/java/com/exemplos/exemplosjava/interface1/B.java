@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @RequiredArgsConstructor
-public class B extends A implements C{
+public class B extends A implements C {
 
     @Override
     public void funcaoA() {

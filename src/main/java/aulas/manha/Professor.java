@@ -21,7 +21,7 @@ public class Professor implements Comparable<Professor> {
         comparator = new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {          //  0 <= X < 1
-                int i = o1.substring(0,1).compareToIgnoreCase(o2.substring(0, 1));
+                int i = o1.substring(0, 1).compareToIgnoreCase(o2.substring(0, 1));
                 return i == 0 ? Integer.compare(o1.length(), o2.length()) : i;
             }
         };
@@ -39,8 +39,8 @@ public class Professor implements Comparable<Professor> {
     public Comparator<String> getComparator() {
         return comparator;
     }
-    
-    public boolean existe(){
+
+    public boolean existe() {
         return true;
     }
 
