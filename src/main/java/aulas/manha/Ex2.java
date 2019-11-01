@@ -1,10 +1,31 @@
 package aulas.manha;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.function.Consumer;
 
 public class Ex2 {
 
     public static void main(String[] args) {
+
+        String palavra = "amor"; // Palavra a ser testada
+        System.out.println(palavra + (palimdromo(palavra) ? " é " : " não é ") + " palindromo.");
+
+        int[] lista = {1, 2, 3, 3, 4, 5, 6, 6, 8, 9};
+
+        removeDuplicados(new ArrayList<>(Arrays.asList()));
+
+        int entrada = 123456789;
+
+        inverteNumero(entrada);
+
+        String frase = "O Kaique está na sala";
+
+        invertePalavras(frase);
+
         /**
          * Palindromo.
          *
@@ -17,9 +38,6 @@ public class Ex2 {
         /**
          * 1. Criar uma função que determine se um String é palindromo.
          */
-        String palavra = ""; // Palavra a ser testada
-        System.out.println(palavra + (palimdromo(palavra) ? " é " : " não é ") + " palindromo.");
-
         /**
          * 2. Crie uma função que remova números duplicados de um Array ou List
          */
@@ -36,23 +54,44 @@ public class Ex2 {
     }
 
     private static boolean palimdromo(String texto) {
-        throw new UnsupportedOperationException("Exercicio 1");
-    }
 
-    private static int[] removeDuplicados(int[] array) {
-        throw new UnsupportedOperationException("Exercicio 2");
+        String inverso = "";
+
+        for (int i = texto.length() - 1; i >= 0; i--) {
+            inverso = inverso + texto.charAt(i);
+        }
+        return texto.toLowerCase().equals(inverso.toLowerCase());
     }
 
     private static void removeDuplicados(List<Integer> lista) {
-        throw new UnsupportedOperationException("Exercicio 2");
+
+        Set<Integer> set = new HashSet<>();
+        lista.forEach((Integer a) -> {
+            set.add(a);
+        });
+        lista.remove(set);
+
+        System.out.println(lista);
     }
 
     private static String invertePalavras(String frase) {
-        throw new UnsupportedOperationException("Exercicio 3");
+
+        String fraseInvertida = "";
+
+        String palavras[] = frase.split(" ");
+
+        for (int i = frase.length() - 1; i >= 0; i--) {
+            fraseInvertida = fraseInvertida.concat(palavras[i] + " ");
+        }
+
+        return fraseInvertida;
     }
 
     private static int inverteNumero(int entrada) {
-        throw new UnsupportedOperationException("Exercicio 4 ");
+
+        String reverso = new StringBuffer(Integer.toString(entrada)).reverse().toString();
+        System.out.println(entrada + "\n" + reverso);
+        return 0;
     }
 
 }
