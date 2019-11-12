@@ -71,5 +71,37 @@ public class A1 {
         System.out.println("contem 'io' " + linha.contains("io"));
         System.out.println("contem 'Fa'  " + linha.contains("Fa"));
         System.out.println("contem 'FAB' " + linha.contains("FAB"));
+
+        // Convertendo em String
+        String variavel = String.valueOf(true);
+        System.out.println(variavel);
+
+        variavel = String.valueOf(10);
+        System.out.println(variavel);
+
+        variavel = String.valueOf(10L);
+        System.out.println(variavel);
+
+        variavel = String.valueOf(10.5f);
+        System.out.println(variavel);
+
+        variavel = String.valueOf('c');
+        System.out.println(variavel);
+
+        variavel = String.valueOf(new char[]{'a', 'b', 'c'});
+        System.out.println(variavel);
+
+        variavel = 'a' + "";
+        System.out.println(variavel);
+
+        variavel = 10 + "";
+        System.out.println(variavel);
+
+        variavel = 10L + "";
+        System.out.println(variavel);
+
+        variavel = 10.5f + "";
+        System.out.println(variavel);
+
     }
 }
