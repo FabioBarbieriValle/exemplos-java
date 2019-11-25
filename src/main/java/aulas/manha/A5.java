@@ -30,7 +30,7 @@ public class A5 {
         };
 
         //Function - Classe que implementa uma função que recebe T e retorna R
-        Function<String, String[]> function = t                 -> t.split(" ");
+        Function<String, String[]> function = t -> t.split(" ");
 
         String[] resultado = function.apply("Este texto vai ser quebrado");
         consumer.accept(Arrays.stream(resultado).toString());

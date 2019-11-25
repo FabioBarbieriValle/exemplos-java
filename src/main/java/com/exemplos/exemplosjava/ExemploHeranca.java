@@ -16,7 +16,6 @@ public class ExemploHeranca {
 
         Aluno aluno = new Aluno("Carlos", "Nascimento", new Date(1980, 07, 18), 123456, 7.5f);
         mostraInformacoes(aluno);
-        
 
 //        mostraInformacoes("Texto");
 //        mostraInformacoes(new String("Texto"));
