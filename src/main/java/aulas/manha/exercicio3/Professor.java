@@ -1,5 +1,6 @@
 package aulas.manha.exercicio3;
 
+import com.exemplos.exemplosjava.statico.ConverteDolar;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -7,7 +8,7 @@ public class Professor {
 
     private static final SimpleDateFormat FORMATA_DATA = new SimpleDateFormat("dd/MM/yyyy");
 
-    private String nome;
+    private final String nome;
     private String sobrenome;
     private Date dataNascimento;
     private String disciplina;
@@ -29,10 +30,9 @@ public class Professor {
         return nome;
     }
 
-    public void setNome(String nome) {
+    /*public void setNome(String nome) {
         this.nome = nome;
-    }
-
+    }*/
     public String getSobrenome() {
         return sobrenome;
     }

@@ -19,7 +19,7 @@ public class Professor extends Pessoa {
 
     @Override
     public String getInformacoes() {
-        return String.format("Professor: %s\nDisciplia: %s\nSalário: R$ %.2f", getNomeCompleto(), disciplina, salario);
+        return String.format("Professor: %s\nDisciplina: %s\nSalário: R$ %.2f", getNomeCompleto(), disciplina, salario);
     }
 
     public boolean isProfessor() {

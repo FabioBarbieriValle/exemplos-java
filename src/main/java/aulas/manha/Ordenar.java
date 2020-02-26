@@ -21,7 +21,7 @@ public class Ordenar implements Comparable<Ordenar> {
 
     @Override
     public String toString() {
-        return nome + "(" + getMillis() + ")";
+        return nome /*+ "(" + getMillis() + ")"*/;
     }
 
     @Override

@@ -17,6 +17,9 @@ public class ExemploHeranca {
         Aluno aluno = new Aluno("Carlos", "Nascimento", new Date(1980, 07, 18), 123456, 7.5f);
         mostraInformacoes(aluno);
 
+        Estagiario estagiario = new Estagiario("Carla", "Nascimento", new Date(1980, 07, 18), 123456, 7.5f, "Rappi", "entregador", 1500.49f);
+        mostraInformacoes(estagiario);
+
 //        mostraInformacoes("Texto");
 //        mostraInformacoes(new String("Texto"));
         /**
@@ -24,7 +27,7 @@ public class ExemploHeranca {
          * 'getInformacoes()', será executada a que foi definida em Professor
          */
         Pessoa convertido = prof;
-        mostraInformacoes(convertido);
+        //mostraInformacoes(convertido);
 
         System.out.println("\nUso do 'instanceof'");
 
@@ -33,7 +36,6 @@ public class ExemploHeranca {
             System.out.println("É instância de Pessoa");
         }
         if ((convertido instanceof Aluno)) {
-
             System.out.println("É instância de Aluno");
         }
         if ((convertido instanceof Professor)) {
@@ -43,8 +45,34 @@ public class ExemploHeranca {
         /**
          * Como 'aluno' herda 'Pessoa', não é preciso dar cast
          */
-        convertido = aluno;
+        convertido = estagiario;
 
+        
+        /**
+         * Agora o inverso não é verdade, de 'Pessoa' para 'Aluno' é preciso dar
+         * cast
+         */
+        estagiario = (Estagiario) convertido;
+
+        System.out.println("\nEstagiário::");
+        if ((convertido instanceof Pessoa)) {
+            System.out.println("É instância de Pessoa");
+        }
+        if ((convertido instanceof Estagiario)) {
+            System.out.println("É instância de Estagiario");
+        }
+        if ((convertido instanceof Aluno)) {
+            System.out.println("É instância de Aluno");
+        }
+        if ((convertido instanceof Professor)) {
+            System.out.println("É instância de Professor");
+        }
+        
+         /**
+         * Como 'aluno' herda 'Pessoa', não é preciso dar cast
+         */
+        convertido = aluno;
+        
         /**
          * Agora o inverso não é verdade, de 'Pessoa' para 'Aluno' é preciso dar
          * cast
@@ -87,6 +115,8 @@ public class ExemploHeranca {
 
         if (p instanceof Professor) {
             System.out.println("é professor! " + (p instanceof Pessoa ? "mas também é pessoa!" : ""));
+        } else if (p instanceof Estagiario) {
+            System.out.println("é estagiario!");
         } else if (p instanceof Aluno) {
             System.out.println("é aluno!");
         } else if (p instanceof Pessoa) {

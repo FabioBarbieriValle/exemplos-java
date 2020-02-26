@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 public class A3 {
@@ -57,6 +58,23 @@ public class A3 {
 
         //troca todos os "Fernanda" por "REMOVIDO"
         nomes.replaceAll((t) -> t.equals("Fernanda") ? "REMOVIDO" : t);
+
+        int x = 0;
+
+        if (nomes.isEmpty()) {
+            x++;
+        } else if (1 == 1) {
+            x--;
+        } else {
+            x--;
+        }
+        String t = "";
+        System.out.println(t.equals("Fernanda") ? "REMOVIDO" : t);
+        x += (nomes.isEmpty() ? 1 : (nomes.size() == 1 ? 1 : -1));
+
+        if (nomes.isEmpty()) {
+            x++;
+        }
 
         System.out.println("Replace todos 'fernanda'");
         System.out.println("Nomes: " + nomes.stream().collect(Collectors.joining(",")));

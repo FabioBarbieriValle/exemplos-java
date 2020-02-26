@@ -10,7 +10,7 @@ import lombok.Setter;
  * Ao descomentar 'final', a classe pessoa torna-se constante e portanto nenhuma
  * classe poderá herdar Pessoa
  */
-public /*final*/ class Pessoa extends Object {
+public /*final*/ class Pessoa {
 
     private String nome;
     private String sobrenome;
@@ -32,9 +32,6 @@ public /*final*/ class Pessoa extends Object {
          * Ao final temos como resultado dessa função o texto "Pessoa" ou
          * "Aluno", dependendo de qual objeto chama ela
          */
-
-        Pessoa a = null;
-        Pessoa b = null;
 
         return this.getClass().getSimpleName() + ": " + getNomeCompleto() + "\nData: " + dataNascimento;
     }
