@@ -29,8 +29,26 @@ public class A5 {
             }
         };
 
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+        System.out.println(supplier.get());
+
         //Function - Classe que implementa uma função que recebe T e retorna R
         Function<String, String[]> function = t -> t.split(" ");
+
+        Function<String, String[]> function2 = new Function<String, String[]>() {
+            @Override
+            public String[] apply(String t) {
+                return t.split(" ");
+            }
+        };
+      
+                
 
         String[] resultado = function.apply("Este texto vai ser quebrado");
         consumer.accept(Arrays.stream(resultado).toString());

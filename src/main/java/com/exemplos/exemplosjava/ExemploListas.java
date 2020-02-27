@@ -4,6 +4,7 @@ import com.exemplos.exemplosjava.heranca1.Pessoa;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class ExemploListas {
@@ -31,6 +32,10 @@ public class ExemploListas {
 
         set.addAll(lista);
 
+        lista.forEach( (item) -> {
+            System.out.println("Item: " + item);
+        });
+
         /* set.add("c"); // 2
         set.add("a"); // 0 
 
@@ -49,15 +54,13 @@ public class ExemploListas {
             System.out.println("set :: " + variavel);
         }
 
-      
-        
         for (String variavel : set) {
             long contador = lista.stream()
                     .filter(s -> s.equals(variavel))
                     .count();
             if (contador > 1) {
-                lista.removeIf((String itemLista) -> 
-                        itemLista.equals(variavel) && contador > 1);
+                lista.removeIf((String itemLista)
+                        -> itemLista.equals(variavel) && contador > 1);
             }
         }
 
