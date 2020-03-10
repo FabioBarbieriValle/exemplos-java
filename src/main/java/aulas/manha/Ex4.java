@@ -38,31 +38,11 @@ public class Ex4 {
     }
 
     public static int count(String texto, String... caracteres) {
-        int resultado = 0;
-
-        for (String caractere : caracteres) {
-            int subIndex = texto.toLowerCase().indexOf(caractere.toLowerCase());
-
-            while (subIndex > -1) {
-                resultado += 1;
-                subIndex = texto.toLowerCase().indexOf(caractere.toLowerCase(), subIndex + 1);
-            }
-        }
-        return resultado;
+        return 0;
     }
 
     public static int count2(String texto, char[] caracteres) {
-        int resultado = 0;
-
-        for (String letra : texto.split("")) {
-            for (char caractere : caracteres) {
-                if (("" + caractere).equalsIgnoreCase(letra)) {
-                    resultado++;
-                }
-            }
-        }
-
-        return resultado;
+        return 0;
     }
 
 }
